@@ -46,7 +46,7 @@ export default {
     }
     body {
         color: #fff;
-        background: linear-gradient(to right, rgb(19, 150, 85), rgb(17, 80, 150))
+        background: linear-gradient(to right, rgb(60, 59, 63), rgb(96, 92, 60));
     }
 
     #app {
