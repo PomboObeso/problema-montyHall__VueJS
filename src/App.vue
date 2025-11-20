@@ -9,7 +9,7 @@
             </div>
             <div v-if="!started">
                 <label for="selectedPort">Qual porta é premiada?</label>
-                <input type="text" id="selectedPort" size="3"
+                <input type="text" id="selectedPort" size="3" required
                     v-model.number="selectedPort">
             </div>
             <button v-if="!started" @click="started = true">Iniciar</button>
@@ -25,6 +25,7 @@
 
 <script>
 import Door from './components/Door.vue';
+const getRandomNumber = () => Math.floor((Math.random() * 3) + 1)
 export default {
     name:'App',
     components: {Door},
@@ -32,7 +33,7 @@ export default {
         return {
             started: false,
             portsAmount: 3, 
-            selectedPort: null
+            selectedPort: getRandomNumber()
         }
     }
 }
